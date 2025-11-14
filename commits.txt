@@ -1,0 +1,6 @@
+Initial project structure with Android manifest and Gradle configuration
+Implement Camera2 capture, MainActivity UI with toggle and FPS counter
+Add JNI bridge NativeLib and native C++ OpenCV processing with Canny edge detection
+Implement OpenGL ES 2.0 renderer with texture updates and shader sources
+Create TypeScript web viewer with base64 image loading and canvas rendering
+Add comprehensive README with architecture, build instructions and commit guidelines

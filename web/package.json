@@ -1,0 +1,16 @@
+{
+  "name": "flam-edge-viewer",
+  "version": "1.0.0",
+  "description": "Web viewer for edge detection frames",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["opencv", "edge-detection", "viewer"],
+  "author": "Flam Assignment",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}

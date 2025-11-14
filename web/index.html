@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flam Edge Detection Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+            color: #6200EE;
+        }
+        
+        .container {
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        canvas {
+            border: 2px solid #6200EE;
+            background: #000;
+            max-width: 90vw;
+            height: auto;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .stats {
+            margin: 5px 0;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        button {
+            padding: 12px 24px;
+            background: #6200EE;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #7c3aed;
+        }
+        
+        button:active {
+            background: #5b21b6;
+        }
+        
+        .info {
+            max-width: 800px;
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flam Edge Detection Web Viewer</h1>
+    
+    <div class="container">
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <div class="overlay">
+            <div class="stats" id="fpsDisplay">FPS: 0.0</div>
+            <div class="stats" id="resolutionDisplay">Resolution: 0x0</div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="loadSampleBtn">Load Sample Frame</button>
+        <button id="uploadBtn">Upload Your Image</button>
+        <button id="clearBtn">Clear Canvas</button>
+        <input type="file" id="fileInput" accept="image/*">
+    </div>
+    
+    <div class="info">
+        <p>This web viewer demonstrates real-time frame processing visualization.</p>
+        <p>Click "Load Sample Frame" to display a processed edge detection result, or "Upload Your Image" to analyze any image.</p>
+    </div>
+    
+    <script src="dist/index.js"></script>
+</body>
+</html>
